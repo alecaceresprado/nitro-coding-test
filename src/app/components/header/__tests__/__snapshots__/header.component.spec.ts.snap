@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent should render 1`] = `
+<app-header>
+  <header
+    class="header"
+  >
+    <div
+      class="header__logo"
+    />
+  </header>
+</app-header>
+`;

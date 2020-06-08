@@ -46,3 +46,13 @@ Array [
   },
 ]
 `;
+
+exports[`AppComponent should render 1`] = `
+<app-root
+  postService={[Function Object]}
+>
+  <app-header /><div>
+     
+  </div>
+</app-root>
+`;

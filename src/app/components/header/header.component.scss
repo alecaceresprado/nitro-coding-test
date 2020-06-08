@@ -1,0 +1,19 @@
+@import "../../../styles/vars";
+
+.header {
+  background: $nitro-tile;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3rem;
+
+  &__logo{
+    background: url(https://s3.amazonaws.com/cf-nitroengassets-prod/express/_global/logos/nitro-logo-orange-white.svg) 0 50% no-repeat;
+    top: .5rem;
+    left: .5rem;
+    padding: 0;
+    position: relative;
+    height: 2rem;
+    width: 4.75rem;
+  }
+}

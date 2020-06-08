@@ -35,8 +35,11 @@ describe('AppComponent', () => {
   });
 
   it('should create the app', () => {
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(fixture).toBeTruthy();
+  });
+
+  it('should render', () => {
+    expect(fixture).toMatchSnapshot();
   });
 
   it('should fetch posts', () => {
