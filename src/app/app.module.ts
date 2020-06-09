@@ -8,9 +8,15 @@ import { PostService } from '@services';
 import { appReducer, PostEffects } from '@state';
 import { HeaderComponent, PostsContainerComponent } from './components';
 import { AppComponent } from './app.component';
+import { GoupingSelectorComponent } from './components/gouping-selector/gouping-selector.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, PostsContainerComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    PostsContainerComponent,
+    GoupingSelectorComponent,
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,

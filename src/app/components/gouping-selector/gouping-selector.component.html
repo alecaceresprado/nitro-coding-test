@@ -1,0 +1,16 @@
+<div class="grouping-selector">
+  <div class="grouping-selector__title">Options</div>
+  <div class="grouping-selector__criteria">
+    Order Criteria
+    <p
+      *ngFor="let criteriaElement of criteria"
+      class="grouping-selector__criteria-element"
+      [class.grouping-selector__criteria-element--selected]="
+        criteriaElement === selectedCriteria
+      "
+      (click)="handleCriteriaChange.emit(criteriaElement)"
+    >
+      {{ criteriaElement }}
+    </p>
+  </div>
+</div>

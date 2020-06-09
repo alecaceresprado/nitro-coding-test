@@ -31,8 +31,9 @@ module.exports = {
   moduleFileExtensions: ["ts", "js", "html"],
   moduleNameMapper: {
     "@services": "<rootDir>/src/app/services/index.ts",
-    "@utils": "<rootDir>/src/app/utils/index.ts",
     "@state": "<rootDir>/src/app/state/index.ts",
+    "@utils": "<rootDir>/src/app/utils/index.ts",
+    "@models": "<rootDir>/src/app/models/index.ts",
   },
   testMatch: ["**/+(*.)+(spec|test).+(ts|js)?(x)"],
   transform: {

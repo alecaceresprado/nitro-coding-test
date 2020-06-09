@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoupingSelectorComponent should create 1`] = `
+<app-gouping-selector
+  criteria={[Function Array]}
+  handleCriteriaChange={[Function EventEmitter]}
+  selectedCriteria={[Function String]}
+>
+  <div
+    class="grouping-selector"
+  >
+    <div
+      class="grouping-selector__title"
+    >
+      Options
+    </div>
+    <div
+      class="grouping-selector__criteria"
+    >
+       Order Criteria 
+      
+      <p
+        class="grouping-selector__criteria-element grouping-selector__criteria-element--selected"
+      >
+         By posting week 
+      </p>
+      <p
+        class="grouping-selector__criteria-element"
+      >
+         By location 
+      </p>
+      <p
+        class="grouping-selector__criteria-element"
+      >
+         By author 
+      </p>
+    </div>
+  </div>
+</app-gouping-selector>
+`;
