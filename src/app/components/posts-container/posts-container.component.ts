@@ -14,6 +14,7 @@ export class PostsContainerComponent implements OnChanges {
   public selectedCriteria: OrderCriteria = OrderCriteria.WEEK;
   public groupings: GroupingCacheModel = {};
   public selectedPostId: number;
+  public postToShow: Post;
 
   public ngOnChanges() {
     this.setupGrouping();
@@ -26,9 +27,11 @@ export class PostsContainerComponent implements OnChanges {
 
   public handlePostClick(postId): void {
     this.selectedPostId = postId;
+    this.postToShow = this.posts.find((post) => post.id === postId);
   }
 
   private setupGrouping(): void {
+    this.postToShow = undefined;
     this.groupings[this.selectedCriteria] = groupBy(
       this.posts,
       this.selectedCriteria

@@ -31,15 +31,13 @@ Object {
         "author": "Happy User",
         "id": 2,
         "location": "San Francisco",
-        "text": "The modernworkplace is increasingly digital, and workflows are constantly evolving. ",
+        "text": "The modern workplace is increasingly digital, and workflows are constantly evolving. ",
         "time": "1501690872486",
       },
-    ],
-    "SanFrancisco": Array [
       Object {
         "author": "Happy Developer",
         "id": 3,
-        "location": "SanFrancisco",
+        "location": "San Francisco",
         "text": "Digital transformation isn’t justa buzzword",
         "time": "1501690872999",
       },
@@ -76,13 +74,13 @@ Object {
         "author": "Happy User",
         "id": 2,
         "location": "San Francisco",
-        "text": "The modernworkplace is increasingly digital, and workflows are constantly evolving. ",
+        "text": "The modern workplace is increasingly digital, and workflows are constantly evolving. ",
         "time": "1501690872486",
       },
       Object {
         "author": "Happy Developer",
         "id": 3,
-        "location": "SanFrancisco",
+        "location": "San Francisco",
         "text": "Digital transformation isn’t justa buzzword",
         "time": "1501690872999",
       },
@@ -110,6 +108,7 @@ Object {
 exports[`PostsContainerComponent should render 1`] = `
 <app-posts-container
   groupings={[Function Object]}
+  postToShow="undefined"
   posts={[Function Array]}
   selectedCriteria={[Function String]}
 >
@@ -148,11 +147,26 @@ exports[`PostsContainerComponent should render 1`] = `
         </div>
       </div>
     </app-posts-tree>
-    <div
+    <app-post-details
       class="posts__display"
     >
-      posts_display
-    </div>
+      <div
+        class="post-details"
+      >
+        <div
+          class="post-details__title"
+        >
+          Post details
+        </div>
+        
+        <div
+          class="post-details__header"
+        >
+           Please select a post from the list on your left 
+        </div>
+      </div>
+      
+    </app-post-details>
     <app-gouping-selector
       class="posts__criteria"
     >
@@ -215,13 +229,13 @@ Object {
         "author": "Happy User",
         "id": 2,
         "location": "San Francisco",
-        "text": "The modernworkplace is increasingly digital, and workflows are constantly evolving. ",
+        "text": "The modern workplace is increasingly digital, and workflows are constantly evolving. ",
         "time": "1501690872486",
       },
       Object {
         "author": "Happy Developer",
         "id": 3,
-        "location": "SanFrancisco",
+        "location": "San Francisco",
         "text": "Digital transformation isn’t justa buzzword",
         "time": "1501690872999",
       },

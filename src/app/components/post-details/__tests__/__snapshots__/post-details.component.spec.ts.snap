@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostDetailsComponent should render - post 1`] = `
+<app-post-details
+  post={[Function Object]}
+>
+  <div
+    class="post-details"
+  >
+    <div
+      class="post-details__title"
+    >
+      Post details
+    </div>
+    
+    <div
+      class="post-details__header"
+    >
+       Post number 1 | 1970/0/1 
+      <br />
+       Written in San Francisco, by Happy User 
+      <div
+        class="post-details__content"
+      >
+        <div
+          class="post-details__content-title"
+        >
+          content
+        </div>
+        <div
+          class="post-details__content-text"
+        >
+          Proper PDF conversion ensures that every element of your document remains just as you left it.
+        </div>
+      </div>
+    </div>
+  </div>
+</app-post-details>
+`;
+
+exports[`PostDetailsComponent should render - zrp 1`] = `
+<app-post-details>
+  <div
+    class="post-details"
+  >
+    <div
+      class="post-details__title"
+    >
+      Post details
+    </div>
+    
+    <div
+      class="post-details__header"
+    >
+       Please select a post from the list on your left 
+    </div>
+  </div>
+</app-post-details>
+`;

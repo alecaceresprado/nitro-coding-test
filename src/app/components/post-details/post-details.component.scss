@@ -1,0 +1,23 @@
+@import "../../../styles/vars";
+
+.post-details {
+  &__title {
+    @include sectionTitle();
+  }
+  &__header {
+    margin: 1rem;
+  }
+
+  &__content {
+    @include layout();
+    padding: 1rem;
+  }
+  &__content-title {
+    width: fit-content;
+    position: relative;
+    top: -1.6rem;
+    background: white;
+    margin-bottom: -1.25rem;
+    padding: 0 0.25rem;
+  }
+}

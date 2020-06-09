@@ -1,11 +1,5 @@
 @import "../../../styles/vars";
 
-@mixin layout {
-  margin: .5rem;
-  border: 1px solid black;  
-  border-radius: .25rem;
-}
-
 .posts {
   height: calc(100vh - #{$header-height});
   display: flex;

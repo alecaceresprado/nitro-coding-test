@@ -5,7 +5,10 @@
     (handlePostClick)="handlePostClick($event)"
     class="posts__tree"
   ></app-posts-tree>
-  <div class="posts__display">posts_display</div>
+  <app-post-details
+    [post]="postToShow"
+    class="posts__display"
+  ></app-post-details>
   <app-gouping-selector
     class="posts__criteria"
     (handleCriteriaChange)="handleCriteriaChange($event)"

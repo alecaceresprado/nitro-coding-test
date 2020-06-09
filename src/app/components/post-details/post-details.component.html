@@ -1,0 +1,17 @@
+<div class="post-details">
+  <div class="post-details__title">Post details</div>
+  <div class="post-details__header" *ngIf="!!post; else postZrp">
+    Post number {{ post.id }} | {{ postDate }} <br />
+    Written in {{ post.location }}, by {{ post.author }}
+    <div class="post-details__content">
+      <div class="post-details__content-title">content</div>
+      <div class="post-details__content-text">{{ post.text }}</div>
+    </div>
+  </div>
+</div>
+
+<ng-template #postZrp>
+  <div class="post-details__header">
+    Please select a post from the list on your left
+  </div>
+</ng-template>

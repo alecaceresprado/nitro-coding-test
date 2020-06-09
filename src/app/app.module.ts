@@ -11,6 +11,7 @@ import {
   PostsContainerComponent,
   GoupingSelectorComponent,
   PostsTreeComponent,
+  PostDetailsComponent
 } from './components';
 import { AppComponent } from './app.component';
 
@@ -21,6 +22,7 @@ import { AppComponent } from './app.component';
     PostsContainerComponent,
     GoupingSelectorComponent,
     PostsTreeComponent,
+    PostDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import {
   PostsContainerComponent,
   GoupingSelectorComponent,
   PostsTreeComponent,
+  PostDetailsComponent,
 } from '../../../components';
 import { OrderCriteria } from '@models';
 
@@ -19,6 +20,7 @@ describe('PostsContainerComponent', () => {
         PostsContainerComponent,
         GoupingSelectorComponent,
         PostsTreeComponent,
+        PostDetailsComponent,
       ],
     }).compileComponents();
   }));
