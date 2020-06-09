@@ -1,7 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostsContainerComponent } from '../posts-container.component';
-import { GoupingSelectorComponent } from '../../gouping-selector/gouping-selector.component';
+import {
+  PostsContainerComponent,
+  GoupingSelectorComponent,
+  PostsTreeComponent,
+} from '../../../components';
 import { OrderCriteria } from '@models';
 
 const mockDb = require('../../../../../db.json');
@@ -12,7 +15,11 @@ describe('PostsContainerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PostsContainerComponent, GoupingSelectorComponent],
+      declarations: [
+        PostsContainerComponent,
+        GoupingSelectorComponent,
+        PostsTreeComponent,
+      ],
     }).compileComponents();
   }));
 
@@ -40,5 +47,11 @@ describe('PostsContainerComponent', () => {
     component.handleCriteriaChange(OrderCriteria.LOCATION);
     fixture.detectChanges();
     expect(component.groupings).toMatchSnapshot();
+  });
+
+  it('should handle postClick correctly', () => {
+    component.handlePostClick(3);
+    fixture.detectChanges();
+    expect(component.selectedPostId).toEqual(3);
   });
 });

@@ -1,2 +1,10 @@
 $nitro-tile: #0b6f7b;
 $header-height: 3rem;
+
+@mixin sectionTitle {
+  text-align: center;
+  background: lightgray;
+  height: 2rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}

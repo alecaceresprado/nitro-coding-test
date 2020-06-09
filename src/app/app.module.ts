@@ -6,9 +6,13 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { PostService } from '@services';
 import { appReducer, PostEffects } from '@state';
-import { HeaderComponent, PostsContainerComponent } from './components';
+import {
+  HeaderComponent,
+  PostsContainerComponent,
+  GoupingSelectorComponent,
+  PostsTreeComponent,
+} from './components';
 import { AppComponent } from './app.component';
-import { GoupingSelectorComponent } from './components/gouping-selector/gouping-selector.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,7 @@ import { GoupingSelectorComponent } from './components/gouping-selector/gouping-
     HeaderComponent,
     PostsContainerComponent,
     GoupingSelectorComponent,
+    PostsTreeComponent,
   ],
   imports: [
     BrowserModule,

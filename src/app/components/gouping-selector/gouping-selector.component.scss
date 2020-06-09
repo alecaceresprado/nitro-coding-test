@@ -1,22 +1,21 @@
+@import "../../../styles/vars";
+
 .grouping-selector {
   &__title {
-    text-align: center;
-    background: lightgray;
-    height: 2rem;
-    padding-top: 1rem;
-    margin-bottom: 1rem;
+    @include sectionTitle();
   }
 
   &__criteria {
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
   }
 
   &__criteria-element {
-    margin: .25rem;
+    margin: 0.25rem;
     padding-left: 1rem;
 
     &--selected {
       background: lightblue;
+      color: white;
     }
   }
 }

@@ -13,8 +13,12 @@ export enum OrderCriteria {
   LOCATION = 'By location',
 }
 
+export interface PostTree {
+  [key: string]: Post[];
+}
+
 export interface GroupingCacheModel {
-  [OrderCriteria.WEEK]?: { [key: string]: Post[] };
-  [OrderCriteria.LOCATION]?: { [key: string]: Post[] };
-  [OrderCriteria.AUTHOR]?: { [key: string]: Post[] };
+  [OrderCriteria.WEEK]?: PostTree;
+  [OrderCriteria.LOCATION]?: PostTree;
+  [OrderCriteria.AUTHOR]?: PostTree;
 }

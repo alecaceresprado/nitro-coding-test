@@ -1,7 +1,7 @@
 import { Post, OrderCriteria } from '@models';
 
 export const groupBy = (posts: Post[], criteria: OrderCriteria) =>
-  posts.reduce((acc, curr) => {
+  [...posts].sort(sortBy(criteria)).reduce((acc, curr) => {
     let parent;
     switch (criteria) {
       case OrderCriteria.WEEK:
@@ -18,6 +18,21 @@ export const groupBy = (posts: Post[], criteria: OrderCriteria) =>
     acc[parent] = [...(acc[parent] || []), curr];
     return acc;
   }, {});
+
+function sortBy(criteria: OrderCriteria) {
+  return (a: Post, b: Post) => {
+    switch (criteria) {
+      case OrderCriteria.AUTHOR:
+        return a.author.localeCompare(b.author);
+      case OrderCriteria.LOCATION:
+        return a.location.localeCompare(b.location);
+      case OrderCriteria.WEEK:
+        const dateA = new Date(Number(a.time));
+        const dateB = new Date(Number(b.time));
+        return getWeekNumber(dateA) - getWeekNumber(dateB);
+    }
+  };
+}
 
 function getWeekNumber(date: Date): number {
   const firstDayOfYear: Date = new Date(date.getFullYear(), 0, 1);

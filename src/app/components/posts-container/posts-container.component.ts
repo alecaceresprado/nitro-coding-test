@@ -13,6 +13,7 @@ export class PostsContainerComponent implements OnChanges {
 
   public selectedCriteria: OrderCriteria = OrderCriteria.WEEK;
   public groupings: GroupingCacheModel = {};
+  public selectedPostId: number;
 
   public ngOnChanges() {
     this.setupGrouping();
@@ -21,6 +22,10 @@ export class PostsContainerComponent implements OnChanges {
   public handleCriteriaChange(criteriaElement: OrderCriteria): void {
     this.selectedCriteria = criteriaElement;
     this.setupGrouping();
+  }
+
+  public handlePostClick(postId): void {
+    this.selectedPostId = postId;
   }
 
   private setupGrouping(): void {

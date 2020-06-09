@@ -1,5 +1,10 @@
 <div class="posts">
-  <div class="posts__tree">posts_tree</div>
+  <app-posts-tree
+    [postTree]="groupings[selectedCriteria]"
+    [selectedPostId]="selectedPostId"
+    (handlePostClick)="handlePostClick($event)"
+    class="posts__tree"
+  ></app-posts-tree>
   <div class="posts__display">posts_display</div>
   <app-gouping-selector
     class="posts__criteria"

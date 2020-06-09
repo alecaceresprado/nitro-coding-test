@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsTreeComponent should render 1`] = `
+<app-posts-tree
+  handlePostClick={[Function EventEmitter]}
+  postTree={[Function Object]}
+>
+  <div
+    class="posts-list"
+  >
+    <div
+      class="posts-list__title"
+    >
+      Posts
+    </div>
+    
+  </div>
+</app-posts-tree>
+`;

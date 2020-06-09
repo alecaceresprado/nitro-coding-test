@@ -1,0 +1,31 @@
+@import "../../../styles/vars";
+
+.posts-list {
+  &__title {
+    @include sectionTitle();
+  }
+  &__parent-level {
+    margin: 0 1rem;
+    padding: 0 1rem;
+
+    &--selected {
+      background: lightblue;
+      color: white;
+    }
+  }
+}
+.post-text {
+  padding: .5rem 1rem 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:last-child {
+    padding-bottom: .5rem;
+  }
+
+  &--selected::before {
+    content: "»";
+    margin-left: -.75rem;
+  }
+}
