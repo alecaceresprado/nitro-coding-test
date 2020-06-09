@@ -18,6 +18,9 @@ export class PostsContainerComponent implements OnChanges {
 
   public ngOnChanges() {
     this.setupGrouping();
+    if (this.selectedPostId) {
+      this.postToShow = this.getPost(this.selectedPostId);
+    }
   }
 
   public handleCriteriaChange(criteriaElement: OrderCriteria): void {
@@ -27,14 +30,17 @@ export class PostsContainerComponent implements OnChanges {
 
   public handlePostClick(postId): void {
     this.selectedPostId = postId;
-    this.postToShow = this.posts.find((post) => post.id === postId);
+    this.postToShow = this.getPost(postId);
   }
 
   private setupGrouping(): void {
-    this.postToShow = undefined;
     this.groupings[this.selectedCriteria] = groupBy(
       this.posts,
       this.selectedCriteria
     );
+  }
+
+  private getPost(postId: number) {
+    return this.posts.find((post) => post.id === postId);
   }
 }

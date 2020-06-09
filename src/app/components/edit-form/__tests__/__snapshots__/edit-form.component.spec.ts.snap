@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditFormComponent should render 1`] = `
+<app-edit-form
+  editableFields={[Function Array]}
+  editing="false"
+  fb={[Function FormBuilder]}
+  form={[Function FormGroup]}
+  post={[Function Object]}
+  store={[Function MockStore]}
+  submitted="false"
+  success={[Function Object]}
+>
+  <div
+    class="edit-form"
+  >
+    <div
+      class="edit-form__title"
+    >
+      Edit
+    </div>
+    <form
+      class="ng-untouched ng-pristine ng-valid"
+      novalidate=""
+    >
+      <div
+        class="edit-form__controls"
+      >
+        
+        <div
+          class="edit-form__field"
+        >
+          <label
+            class="edit-form__label"
+            for="author"
+          >
+            author
+          </label>
+          <input
+            class="edit-form__input ng-untouched ng-pristine ng-valid"
+            type="text"
+          />
+          
+        </div>
+        <div
+          class="edit-form__field"
+        >
+          <label
+            class="edit-form__label"
+            for="location"
+          >
+            location
+          </label>
+          <input
+            class="edit-form__input ng-untouched ng-pristine ng-valid"
+            type="text"
+          />
+          
+        </div>
+      </div>
+      <button
+        class="edit-form__button"
+      >
+        Save changes
+      </button>
+    </form>
+  </div>
+</app-edit-form>
+`;

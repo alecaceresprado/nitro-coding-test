@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import {
@@ -5,6 +6,7 @@ import {
   GoupingSelectorComponent,
   PostsTreeComponent,
   PostDetailsComponent,
+  EditFormComponent,
 } from '../../../components';
 import { OrderCriteria } from '@models';
 
@@ -21,7 +23,9 @@ describe('PostsContainerComponent', () => {
         GoupingSelectorComponent,
         PostsTreeComponent,
         PostDetailsComponent,
+        EditFormComponent,
       ],
+      imports: [FormsModule, ReactiveFormsModule],
     }).compileComponents();
   }));
 
@@ -55,5 +59,11 @@ describe('PostsContainerComponent', () => {
     component.handlePostClick(3);
     fixture.detectChanges();
     expect(component.selectedPostId).toEqual(3);
+  });
+
+  it('should get the edited post', () => {
+    component.selectedPostId = 3;
+    component.ngOnChanges();
+    expect(component.postToShow).toMatchSnapshot();
   });
 });

@@ -6,12 +6,15 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { PostService } from '@services';
 import { appReducer, PostEffects } from '@state';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import {
   HeaderComponent,
   PostsContainerComponent,
   GoupingSelectorComponent,
   PostsTreeComponent,
-  PostDetailsComponent
+  PostDetailsComponent,
+  EditFormComponent,
 } from './components';
 import { AppComponent } from './app.component';
 
@@ -23,6 +26,7 @@ import { AppComponent } from './app.component';
     GoupingSelectorComponent,
     PostsTreeComponent,
     PostDetailsComponent,
+    EditFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +38,8 @@ import { AppComponent } from './app.component';
       },
     }),
     EffectsModule.forRoot([PostEffects]),
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [PostService],
   bootstrap: [AppComponent],

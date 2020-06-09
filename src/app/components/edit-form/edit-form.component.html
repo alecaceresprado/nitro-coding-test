@@ -1,0 +1,20 @@
+<div class="edit-form">
+  <div class="edit-form__title">Edit</div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="edit-form__controls">
+      <div *ngFor="let field of editableFields" class="edit-form__field">
+        <label class="edit-form__label" [for]="field">{{ field }}</label>
+        <input class="edit-form__input" type="text" [formControlName]="field" />
+        <p
+          class="edit-form__error"
+          *ngIf="
+            !form.valid && form.dirty && submitted && !form.get(field).valid
+          "
+        >
+          {{ field }} cannot be empty
+        </p>
+      </div>
+    </div>
+    <button class="edit-form__button" (click)="onSubmit()">Save changes</button>
+  </form>
+</div>

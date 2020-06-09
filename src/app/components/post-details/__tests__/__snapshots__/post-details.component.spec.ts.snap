@@ -2,6 +2,7 @@
 
 exports[`PostDetailsComponent should render - post 1`] = `
 <app-post-details
+  editMode="false"
   post={[Function Object]}
 >
   <div
@@ -33,13 +34,25 @@ exports[`PostDetailsComponent should render - post 1`] = `
           Proper PDF conversion ensures that every element of your document remains just as you left it.
         </div>
       </div>
+      <button
+        class="post-details__button"
+      >
+         edit 
+      </button>
+    </div>
+    <div
+      class="post-details__edit-form"
+    >
+      
     </div>
   </div>
 </app-post-details>
 `;
 
 exports[`PostDetailsComponent should render - zrp 1`] = `
-<app-post-details>
+<app-post-details
+  editMode="false"
+>
   <div
     class="post-details"
   >
@@ -53,6 +66,11 @@ exports[`PostDetailsComponent should render - zrp 1`] = `
       class="post-details__header"
     >
        Please select a post from the list on your left 
+    </div>
+    <div
+      class="post-details__edit-form"
+    >
+      
     </div>
   </div>
 </app-post-details>

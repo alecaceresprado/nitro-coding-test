@@ -16,7 +16,7 @@ This project has hot-reloading, so this app will automatically reload if you cha
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests with [Jest](https://jestjs.io/).
+Run `npm test` to execute the unit tests with [Jest](https://jestjs.io/). Coverage: 100%
 
 ## Requirements
  -  Load the static json list of posts attached (ideally you serve the file in a simple node.js server).

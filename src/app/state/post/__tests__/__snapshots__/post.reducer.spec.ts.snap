@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`postReducer should edit post 1`] = `
+Array [
+  Object {
+    "author": "Happy Candidate",
+    "id": 1,
+    "location": "Sydney",
+    "text": "Proper PDF conversion ensures that every element of your document remains just as you left it.",
+    "time": "1552657573",
+  },
+  Object {
+    "author": "Happy Developer",
+    "id": 3,
+    "location": "San Francisco",
+    "text": "Digital transformation isn’t justa buzzword",
+    "time": "1501690872999",
+  },
+]
+`;

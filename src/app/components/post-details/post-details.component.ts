@@ -1,28 +1,27 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 import { Post } from '@models';
 
 @Component({
   selector: 'app-post-details',
   templateUrl: './post-details.component.html',
-  styleUrls: ['./post-details.component.scss']
+  styleUrls: ['./post-details.component.scss'],
 })
-export class PostDetailsComponent implements OnInit {
+export class PostDetailsComponent implements OnChanges {
+  @Input() public post: Post;
 
-  @Input()  public post: Post;
-  /*
-   {
-      "location": "Sydney",
-      "author": "Happy Developer",
-      "text": "An expectation of digital efficiency has become the norm in our daily lives"
-    },
-  */
-  constructor() { }
+  public editMode = false;
 
-  ngOnInit(): void {
+  public ngOnChanges() {
+    this.editMode = false;
   }
+
   public get postDate(): string {
-    const postDate = new Date(Number(this.post.time))
+    const postDate = new Date(Number(this.post.time));
     return `${postDate.getFullYear()}/${postDate.getMonth()}/${postDate.getDay()}`;
+  }
+
+  public toggleEditMode(): void {
+    this.editMode = !this.editMode;
   }
 }

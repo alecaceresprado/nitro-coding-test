@@ -7,6 +7,16 @@
       <div class="post-details__content-title">content</div>
       <div class="post-details__content-text">{{ post.text }}</div>
     </div>
+    <button class="post-details__button" (click)="toggleEditMode()">
+      edit
+    </button>
+  </div>
+  <div class="post-details__edit-form">
+    <app-edit-form
+      *ngIf="editMode"
+      (success)="toggleEditMode()"
+      [post]="post"
+    ></app-edit-form>
   </div>
 </div>
 

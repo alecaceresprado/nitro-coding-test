@@ -1,0 +1,38 @@
+@import "../../../styles/vars";
+
+.edit-form {
+  @include layout();
+
+  &__title {
+    position: relative;
+    background: white;
+    top: -0.6rem;
+    width: fit-content;
+    left: 1rem;
+    padding: 0 0.25rem;
+  }
+
+  &__field {
+    padding: 1rem 1rem 0;
+    &:last-child {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__label {
+    padding-right: 0.5rem;
+  }
+
+  &__error {
+    color: red;
+    margin: 0.25rem 3rem;
+  }
+
+  &__button {
+    position: relative;
+    margin: 1rem;
+    border: none;
+    cursor: pointer;
+    height: 1.5rem;
+  }
+}
