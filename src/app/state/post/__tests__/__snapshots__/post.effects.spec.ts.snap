@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostEffects should dispatch fetchPostsFailed 1`] = `
+Object {
+  "type": "[POST] fetch post - FAIL",
+}
+`;
+
+exports[`PostEffects should dispatch fetchPostsSucceeded 1`] = `
+Object {
+  "posts": Array [
+    Object {
+      "author": "Happy User",
+      "id": 1,
+      "location": "San Francisco",
+      "text": "Proper PDF conversion ensures that every element of your document remains just as you left it.",
+      "time": "1552657573",
+    },
+    Object {
+      "author": "Happy User",
+      "id": 2,
+      "location": "San Francisco",
+      "text": "The modernworkplace is increasingly digital, and workflows are constantly evolving. ",
+      "time": "1552571173",
+    },
+    Object {
+      "author": "Happy Developer",
+      "id": 3,
+      "location": "SanFrancisco",
+      "text": "Digital transformation isn’t justa buzzword",
+      "time": "1552571174",
+    },
+    Object {
+      "author": "Happy Developer",
+      "id": 4,
+      "location": "Sydney",
+      "text": "An expectation of digital efficiency has become the norm in our daily lives",
+      "time": "1552563973",
+    },
+    Object {
+      "author": "Happy Manager",
+      "id": 5,
+      "location": "Dublin",
+      "text": "A modern PDF annotator that canaccommodate all of the cooks in a very busy kitchen is what your employees really need.",
+      "time": "1553080742",
+    },
+    Object {
+      "author": "Happy Manager",
+      "id": 6,
+      "location": "Dublin",
+      "text": "An integratedproductivity solution breaks information through barriers and allows workers to collaborate in real time.",
+      "time": "1553099742",
+    },
+  ],
+  "type": "[POST] fetch post - SUCCESS",
+}
+`;

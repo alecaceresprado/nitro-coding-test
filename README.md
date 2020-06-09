@@ -34,3 +34,7 @@ Run `ng test` to execute the unit tests with [Jest](https://jestjs.io/).
  - Safety – is it resource and input safe?
  - Expertise – does the code feel like it was written by an expert?
  - Craftsmanship – how maintainable is the code by others?
+
+ ## Notes
+  - This project has Redux as state management. Even though the application Idea is small enough not to use a store management. I have decided to include it to show my skills with a state management tool. 
+  

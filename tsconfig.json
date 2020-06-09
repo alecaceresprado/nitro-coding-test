@@ -23,6 +23,9 @@
       "@services": [
         "src/app/services/index.ts"
       ],
+      "@state": [
+        "src/app/state/index.ts"
+      ],
     },
   },
   "angularCompilerOptions": {

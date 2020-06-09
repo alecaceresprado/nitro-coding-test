@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { PostService } from '@services';
 import { Post } from '@models';
+import { AppState, fetchPosts, getPosts } from '@state';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,10 @@ import { Post } from '@models';
 export class AppComponent implements OnInit {
   public posts$: Observable<Post[]>;
 
-  constructor(private postService: PostService) {}
+  constructor(private store: Store<AppState>) {}
 
   public ngOnInit() {
-    this.posts$ = this.postService.getPosts();
+    this.store.dispatch(fetchPosts());
+    this.posts$ = this.store.pipe(select(getPosts));
   }
 }

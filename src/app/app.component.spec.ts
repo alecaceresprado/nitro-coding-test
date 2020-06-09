@@ -1,15 +1,10 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { of } from 'rxjs';
+import { provideMockActions } from '@ngrx/effects/testing';
+import { provideMockStore } from '@ngrx/store/testing';
 
-import { PostService } from '@services';
 import { Post } from '@models';
 import { AppComponent } from './app.component';
-const mockDb = require('../../db.json');
-
-const PostServiceMock = {
-  getPosts: jest.fn(() => of(mockDb.posts)),
-};
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -21,10 +16,8 @@ describe('AppComponent', () => {
       declarations: [AppComponent],
       schemas: [NO_ERRORS_SCHEMA],
       providers: [
-        {
-          provide: PostService,
-          useValue: PostServiceMock,
-        },
+        provideMockStore({ initialState: { posts: [] } }),
+        provideMockActions({} as any),
       ],
     }).compileComponents();
   }));
@@ -42,7 +35,7 @@ describe('AppComponent', () => {
     expect(fixture).toMatchSnapshot();
   });
 
-  it('should fetch posts', () => {
+  it('should fetch posts - initial state', () => {
     component.ngOnInit();
     component.posts$.subscribe((posts: Post[]) => {
       expect(posts).toMatchSnapshot();
